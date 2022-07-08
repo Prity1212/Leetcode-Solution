@@ -29,3 +29,4 @@ Explanation :
 4. At the end, return array
 5. If sum of two elemets is not equal to target value then i returned an empty array.
 
+Time Complexity : O(n^2)
