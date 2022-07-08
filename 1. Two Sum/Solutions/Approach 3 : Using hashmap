@@ -1,0 +1,31 @@
+import java.util.HashMap;
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+
+        // Approach 3 : Using hashmap
+        
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i =0;i<nums.length;i++){
+            int complement =target- nums[i];
+            if(map.containsKey(complement)){
+                if(i != map.get(complement)){
+                    return new int[]{i,map.get(complement)};
+               }
+            }
+            map.put(nums[i],i);
+        }
+        return new int[]{};   
+    }
+}
+
+
+Explanation:
+1. create a hashmap for storing te elements of array 
+2. traverse over array 
+3. check the other element is present in array or not
+   a. if present then we return indices
+   b. if not then we insert the array element in hashmap
+4. Return array in end.
+
+Time Complexity = O(n)
