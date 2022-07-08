@@ -1,0 +1,31 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+       // Approach 1 : Brute Force Approach
+        
+        int arr[]= new int[2];
+        for(int i =0;i<nums.length-1;i++){
+            for(int j =i+1;j<nums.length;j++){
+                if(nums[i]+nums[j] == target){
+                    arr[0]=i;
+                    arr[1]=j;
+                    return arr;
+                }
+            }
+        }
+        return arr;
+        
+        
+        
+    }
+}
+
+
+
+Explanation :
+1. created an array of size 2 - because return type is an array 
+2. used loops for iterating over array
+3. Check sum is equal to target value or not 
+4. At the end, return array
+5. If sum of two elemets is not equal to target value then i returned an empty array.
+
