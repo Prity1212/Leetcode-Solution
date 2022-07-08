@@ -1,6 +1,34 @@
+import java.util.Arrays;
 
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+//      Approach 2 : Using Sorting 
+        
+        Arrays.sort(nums);
+        int i =0;
+        int j = nums.length - 1;
+        int arr[]= new int[2];
+        while(i<j){
+            int sum = nums[i]+nums[j];
+            if(sum > target){
+                j--;
+            }
+            else if(sum < target){
+                i++;
+            }
+            else if(sum == target){
+                arr[0]=i;
+                arr[1]=j;
+                return arr;
+            }
+        }
+        return arr;   
+    }
+}
 
 Explanation :
-1. 
+1. sort the array
+2. used two pointer method and check the condition 
 
-Time Complexity : O(n)
+Time Complexity : O(nlogn)
