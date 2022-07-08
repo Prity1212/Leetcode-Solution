@@ -1,5 +1,5 @@
-For approach 1 - Brute Force Approach:
-     Time Complexity = O(n^2)
+For approach 1 - Brute Force Approach
+                 Time Complexity = O(n^2)
      
  Concept you must know :-
   1. Array
@@ -8,3 +8,16 @@ For approach 1 - Brute Force Approach:
   Some You tubes links : 
     1. loops : https://www.youtube.com/watch?v=0r1SfRoLuzU
     
+   
+For Approach 2  - using Sorting
+                  Time Complexity = O(nlogn)
+                  
+Note : whenever there is a case of searching element, we can use sorting and then search an element
+
+Concept you must know :-
+  1. Array
+  2. Loops 
+  3. Sorting
+  4. if-else condition
+  
+  
