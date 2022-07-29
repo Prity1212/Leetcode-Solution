@@ -1,0 +1,18 @@
+class Solution {
+    public String restoreString(String s, int[] indices) {
+        // String ns = "";
+        char[] store = new char[s.length()];
+        
+        for(int i =0;i<s.length();i++){
+            store[indices[i]] =  s.charAt(i);
+        }
+        // for(int i =0;i<s.length();i++){
+        //     ns += store[i];
+        // }
+        
+        //instead of above (using for loop) can do this too
+        String ns = new String(store);
+        
+        return ns;
+    }
+}
