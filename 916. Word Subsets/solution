@@ -1,0 +1,37 @@
+import java.util.*;
+class Solution {
+    
+    public boolean hasSubset(int[] words1Freq, int[] combinedFreq){
+        for(int i =0;i<26;i++){
+            if(words1Freq[i]<combinedFreq[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public List<String> wordSubsets(String[] words1, String[] words2) {
+        List<String> res = new ArrayList<>();
+        int[] combinedFreq = new int[26];
+        for(String word:words2){
+            int[] freq = new int[26];
+            for(char i: word.toCharArray()){
+                freq[i-'a']++;
+            }
+            for(int i =0;i<26;i++){
+                combinedFreq[i] = Math.max(combinedFreq[i],freq[i]);
+            }
+            
+        }
+        for(String word:words1){
+            int[] words1Freq = new int[26];
+            for(char i:word.toCharArray()){
+                words1Freq[i-'a']++;
+            }
+            if(hasSubset(words1Freq,combinedFreq)){
+                res.add(word);
+            }
+        }
+        return res;
+    }
+}
