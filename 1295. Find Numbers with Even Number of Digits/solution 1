@@ -1,0 +1,30 @@
+class Solution {
+    
+    public int countDigit(int n){
+        int digit =0;
+        while(n>0){
+            n=n/10;
+            digit++;
+        }
+        return digit;
+    }
+    
+    public void setValues(int[] nums){
+        for(int i =0;i<nums.length;i++){
+            int digit = countDigit(nums[i]);
+            nums[i] = digit;
+        }
+    }
+    
+    public int findNumbers(int[] nums) {
+        int num =0; 
+        setValues(nums);
+        for(int i =0;i<nums.length;i++){
+            if(nums[i]%2==0){
+                num++;
+            }
+        }
+        return num;
+        
+    }
+}
