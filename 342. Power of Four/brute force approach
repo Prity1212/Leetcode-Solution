@@ -1,0 +1,22 @@
+class Solution {
+    public int pow(int base, int power){
+        int ans =1;
+        for(int i =1;i<=power;i++){
+            ans = ans*base;
+        }
+        return ans;
+    }
+    
+    public boolean isPowerOfFour(int n) {
+        int val = 1;
+        int i=0;
+        while(val<=n){
+            if(val==n){
+                return true;
+            }
+            i=i+1;
+            val = pow(4,i);
+        }
+        return false;
+    } 
+}
